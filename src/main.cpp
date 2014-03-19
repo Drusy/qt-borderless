@@ -1,4 +1,6 @@
-#include <QtGui>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QTextEdit>
 
 #include "MainFrame.h"
 

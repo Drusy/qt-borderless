@@ -1,6 +1,9 @@
 #include "HoverMoveFilter.h"
 #include "MainFrame.h"
 
+#include <QEvent>
+#include <QHoverEvent>
+
 HoverMoveFilter::HoverMoveFilter(QObject *parent) :
     QObject(parent)
 {
@@ -16,4 +19,3 @@ bool HoverMoveFilter::eventFilter(QObject *obj, QEvent *event)
     // standard event processing
     return QObject::eventFilter(obj, event);
 }
-

@@ -5,7 +5,8 @@ TitleBar::TitleBar(QWidget *parent) : QWidget(parent)
     // Don't let this widget inherit the parent's backround color
     setAutoFillBackground(true);
     // Use a brush with a Highlight color role to render the background
-    setBackgroundRole(QPalette::Highlight);
+    //setBackgroundRole(QPalette::Highlight);
+    setPalette(QPalette(Qt::darkBlue));
 
 
     mMinimizeButton = new QToolButton(this);

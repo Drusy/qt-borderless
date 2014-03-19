@@ -1,4 +1,5 @@
-#include <QtGui>
+#include <QtWidgets/QtWidgets>
+#include <QMouseEvent>
 
 class TitleBar : public QWidget
 {

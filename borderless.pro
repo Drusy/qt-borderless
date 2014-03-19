@@ -1,11 +1,7 @@
-QT       += core gui
+QT       += core gui network widgets
 TARGET = borderless
 TEMPLATE = app
-
-CONFIG += debug
-DESTDIR = ./bin
-MOC_DIR = ./tmp
-OBJECTS_DIR = ./tmp
+CONFIG -= console
 
 SOURCES += \
     src/main.cpp\

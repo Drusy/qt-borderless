@@ -1,4 +1,5 @@
-#include <QtGui>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QMainWindow>
 
 #define WINDOW_MARGIN 5
 class TitleBar;
