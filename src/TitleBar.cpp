@@ -80,3 +80,11 @@ void TitleBar::mouseMoveEvent(QMouseEvent *me)
         return;
     parentWidget()->move(me->globalPos() - mClickPos);
 }
+
+void TitleBar::mouseDoubleClickEvent(QMouseEvent *event)
+{
+    if(event->button() == Qt::LeftButton)
+    {
+        showMaxRestore();
+    }
+}

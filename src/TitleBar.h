@@ -15,6 +15,7 @@ public slots:
 protected:
     void mousePressEvent(QMouseEvent *me);
     void mouseMoveEvent(QMouseEvent *me);
+	void mouseDoubleClickEvent(QMouseEvent *event);
 
     QLabel *mLabel;
     QToolButton *mMinimizeButton;
