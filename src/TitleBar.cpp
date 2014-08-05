@@ -46,9 +46,9 @@ TitleBar::TitleBar(QWidget *parent) : QWidget(parent)
 
     mMaxNormal = false;
 
-    connect(mCloseButton, SIGNAL( clicked() ), parent, SLOT(close() ) );
-    connect(mMinimizeButton, SIGNAL( clicked() ), this, SLOT(showSmall() ) );
-    connect(mMaximizeButton, SIGNAL( clicked() ), this, SLOT(showMaxRestore() ) );
+    connect(mCloseButton, SIGNAL( clicked() ), parent, SLOT(close()));
+    connect(mMinimizeButton, SIGNAL( clicked() ), this, SLOT(showSmall()));
+    connect(mMaximizeButton, SIGNAL( clicked() ), this, SLOT(showMaxRestore()));
 }
 
 void TitleBar::titleChanged()

@@ -10,7 +10,7 @@ MainFrame::MainFrame()
 
     // Make this a borderless window which can't
     // be resized or moved via the window system
-    setWindowFlags(Qt::FramelessWindowHint);
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint | Qt::Dialog);
 
     // Event tricks
     setMouseTracking(true);
@@ -57,6 +57,21 @@ MainFrame::MainFrame()
     layout->setMargin(WINDOW_MARGIN);
     layout->setSpacing(0);
     vbox->addLayout(layout);
+
+    //HWND hwnd = (HWND)GetActiveWindow();
+    //SetWindowLongPtr(hwnd, GWL_STYLE, static_cast<LONG>(WS_VISIBLE |WS_POPUP | WS_CAPTION | WS_THICKFRAME | WS_MAXIMIZEBOX | WS_MINIMIZEBOX));
+}
+
+bool MainFrame::nativeEvent(const QByteArray &, void *message, long *result) {
+    MSG* msg = reinterpret_cast<MSG*>(message);
+
+    switch(msg->message) {
+      case WM_NCCALCSIZE:
+        *result = 0;
+        return true;
+    }
+
+    return false;
 }
 
 void MainFrame::mousePressEvent(QMouseEvent *e)

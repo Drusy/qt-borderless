@@ -16,6 +16,7 @@ public:
     TitleBar *titleBar() const { return mTitleBar; }
 
     void mousePressEvent(QMouseEvent *e);
+    bool nativeEvent(const QByteArray &eventType, void *message, long *result);
     void mouseReleaseEvent(QMouseEvent *e);
 
     void mouseMove(QPoint newPos, QPoint oldPos);
